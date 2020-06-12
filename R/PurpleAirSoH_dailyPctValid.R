@@ -42,7 +42,7 @@ PurpleAirSoH_dailyPctValid <- function(
   # will have tapered results. Either provide full days or trim to full days
   # after the fact.
   timezone <- pat$meta$timezone
-  localTime <- lubridate::with_tz(pat$dat$datetime, tzone = timezone)
+  localTime <- lubridate::with_tz(pat$data$datetime, tzone = timezone)
   hour <- lubridate::hour(localTime)
   
   range <- range(localTime)
